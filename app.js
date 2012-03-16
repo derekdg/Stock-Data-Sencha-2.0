@@ -11,7 +11,10 @@ Ext.application({
 	models: ['Stats'],
 
     launch: function() {
-        
+		
+		Ext.viewport.autoMaximize = true;
+		
+		
 	     var mainPanel = Ext.create('Ext.Container', {
 			fullscreen: true,
 			scrollable: 'vertical',
