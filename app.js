@@ -22,8 +22,8 @@ Ext.application({
 			items: [
 				{
 					xtype: 'statstitlebar',
-					title: 'Stock Lookup',
-					docked: 'top'
+					title: 'Stock Lookup'
+					//docked: 'top'
 				},
 				{ xtype: 'statsform',
 					height: 100
