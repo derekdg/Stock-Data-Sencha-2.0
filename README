@@ -1,0 +1,16 @@
+Portfolio-Data
+--------------
+
+Web Site Overview
+
+A simple mobile app project that uses YQL to retrieve some financial data for a given ticker.
+
+Technology
+
+Framework: Sench Touch 2.0
+Stock Data: Uses Yahoo! Query Language (YQL) to get the last trade information on the positions
+
+
+Disclaimer!
+
+This project is very much a work in progress. It is not near complete as far as code quality/testability/etc. It was meant to try out Sencha Touch 2.0 for the first time.
