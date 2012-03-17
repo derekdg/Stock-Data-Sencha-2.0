@@ -13,7 +13,8 @@ Ext.define('StockApp.store.Stats', {
 		grouper: {
 		   groupFn: function(record) {
 			   return record.get('groupDescr');
-		   }
+		   },
+		   sortProperty: 'id'
 		},
         /*data: [
             { itemDescr: "Yield", itemValue: "3%" },
