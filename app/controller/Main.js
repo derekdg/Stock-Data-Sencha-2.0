@@ -5,12 +5,13 @@ Ext.define('StockApp.controller.Main', {
 	
     config: {
         refs: {
-			statsForm: 'statsform',
-			statsList: 'statslist',
-			statsStore: 'statsstore'
+        	main: '#mainview',
+					statsForm: 'statsform',
+					statsList: 'statslist',
+					statsStore: 'statsstore'
         },
         control: {
-			'statsform button': {
+						'statsform #submitbutton': {
                 tap: 'onSubmitTap'
             }
         }
@@ -18,12 +19,23 @@ Ext.define('StockApp.controller.Main', {
 
 	onSubmitTap: function() {
 
+		console.log(this.getMain());
+		
+		this.getMain().setMasked({
+            xtype: 'loadmask',
+            message: 'Loading...'
+        });
+
+		        
 		// get the value from the form:
 		var ticker = this.getStatsForm().getValues().ticker
 		
 		//call to YQL:
 		this.makeYqlRequest(ticker, this);
-
+		
+		this.getMain().setMasked(false);
+		
+		
     },
 	
 	makeYqlRequest: function(ticker, e) {

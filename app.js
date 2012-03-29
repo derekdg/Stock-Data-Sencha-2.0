@@ -1,41 +1,40 @@
 Ext.application({
     
     name: 'StockApp',
-	icon: 'favicon.ico',
-	
+		phoneStartupScreen: 'touch/phoneStart.png',
+		glossOnIcon: false,
+		
     requires: [],
 	
     controllers: ['Main'],
     views:  ['StatsTitlebar', 'StatsForm', 'StatsList'],
     stores: ['Stats'],
-	models: ['Stats'],
+		models: ['Stats'],
 
     launch: function() {
-		
-		Ext.viewport.autoMaximize = true;
-		
-		
+        
 	     var mainPanel = Ext.create('Ext.Container', {
-			fullscreen: true,
-			scrollable: 'vertical',
-			layout: {
-						type: 'vbox',
-						align: 'stretch'
+	     	id: 'mainview',
+				fullscreen: true,
+				scrollable: 'vertical',
+				layout: {
+							type: 'vbox',
+							align: 'stretch'
+						},
+				items: [
+					{
+						xtype: 'statstitlebar',
+						title: 'Stock Lookup'
+						//docked: 'top'
 					},
-			items: [
-				{
-					xtype: 'statstitlebar',
-					title: 'Stock Lookup'
-					//docked: 'top'
-				},
-				{ xtype: 'statsform',
-					height: 100
-				},
-				{ 
-					xtype: 'statslist'
-					//flex: 2
-				}
-			]
+					{ xtype: 'statsform',
+						height: 100
+					},
+					{ 
+						xtype: 'statslist'
+						//flex: 2
+					}
+				]
 		});
     	
 

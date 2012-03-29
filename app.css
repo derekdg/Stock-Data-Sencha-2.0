@@ -4935,7 +4935,8 @@ audio {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bccfe6), color-stop(2%, #6792c5), color-stop(100%, #3f6ea6));
   background-image: -webkit-linear-gradient(#bccfe6, #6792c5 2%, #3f6ea6);
   background-image: linear-gradient(#bccfe6, #6792c5 2%, #3f6ea6);
-  color: #1f3651;
+  /* color: #1f3651; */
+  color: #fff;
   text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
   border-top: 1px solid #4d80bc;
   border-bottom: 1px solid #2d4e76;
