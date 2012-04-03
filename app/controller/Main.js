@@ -62,18 +62,24 @@ Ext.define('StockApp.controller.Main', {
 
 				  var d = [
 					{ id: 1, groupDescr: "Stock Data", itemDescr : o.Name + " (" + o.Symbol + ")", itemValue: "" },
-					{ id: 2, groupDescr: "Stock Data", itemDescr: "Ask Price",     		itemValue: "$" + valueOrDefault(o.AskRealtime,0) },
-					{ id: 3, groupDescr: "Dividend Data", itemDescr: "Dividend Yield",     	itemValue: valueOrDefault(o.DividendYield, 0) + "%" },
-					{ id: 4, groupDescr: "Dividend Data", itemDescr: "Dividend per Share ",	itemValue: "$" + valueOrDefault(o.DividendShare) },
-					{ id: 5, groupDescr: "Dividend Data", itemDescr: "Ex-Dividend Date",    itemValue: valueOrDefault(o.ExDividendDate) 	},
-					{ id: 6, groupDescr: "Dividend Data", itemDescr: "Dividend Pay Date",   itemValue: valueOrDefault(o.DividendPayDate) 	},
-					{ id: 7, groupDescr: "Ratios", itemDescr: "EPS",    				itemValue: valueOrDefault(o.EarningsShare)  	},
-					{ id: 8, groupDescr: "Ratios", itemDescr: "EBITDA",    			itemValue: valueOrDefault(o.EBITDA) 	},
-					{ id: 9, groupDescr: "Ratios", itemDescr: "Price/Sales",    		itemValue: valueOrDefault(o.PriceSales) 	},
-					{ id: 10, groupDescr: "Ratios", itemDescr: "Price/Book ",    		itemValue: valueOrDefault(o.PriceBook) 	},
-					{ id: 11, groupDescr: "Ratios", itemDescr: "Price/Earnings",  	itemValue: valueOrDefault(o.PERatio) 	},
-					{ id: 12, groupDescr: "Ratios", itemDescr: "PEG ",    			itemValue: valueOrDefault(o.PEGRatio) 	},
-					{ id: 13, groupDescr: "Ratios", itemDescr: "Short",    			itemValue: valueOrDefault(o.ShortRatio) 	}
+					{ id: 2, groupDescr: "Stock Data", itemDescr: "Market Cap",     		itemValue: "$" + valueOrDefault(o.MarketCapitalization,0) },
+					{ id: 3, groupDescr: "Stock Data", itemDescr: "Ask Price",     		itemValue: "$" + valueOrDefault(o.AskRealtime,0) },
+					{ id: 4, groupDescr: "Stock Data", itemDescr: "52 Week High",     		itemValue: "$" + valueOrDefault(o.YearHigh,0) },
+					{ id: 5, groupDescr: "Stock Data", itemDescr: "52 Week Low",     		itemValue: "$" + valueOrDefault(o.YearLow,0) },
+					{ id: 6, groupDescr: "Stock Data", itemDescr: "Book Value",     		itemValue: "$" + valueOrDefault(o.BookValue,0) },
+					{ id: 7, groupDescr: "Stock Data", itemDescr: "50 Day Moving Avg",     		itemValue: "$" + valueOrDefault(o.FiftydayMovingAverage,0) },
+					{ id: 8, groupDescr: "Stock Data", itemDescr: "200 Day Moving Avg",     		itemValue: "$" + valueOrDefault(o.TwoHundreddayMovingAverage,0) },
+					{ id: 9, groupDescr: "Dividend Data", itemDescr: "Dividend Yield",     	itemValue: valueOrDefault(o.DividendYield, 0) + "%" },
+					{ id: 10, groupDescr: "Dividend Data", itemDescr: "Dividend per Share ",	itemValue: "$" + valueOrDefault(o.DividendShare) },
+					{ id: 11, groupDescr: "Dividend Data", itemDescr: "Ex-Dividend Date",    itemValue: valueOrDefault(o.ExDividendDate) 	},
+					{ id: 12, groupDescr: "Dividend Data", itemDescr: "Dividend Pay Date",   itemValue: valueOrDefault(o.DividendPayDate) 	},
+					{ id: 13, groupDescr: "Ratios", itemDescr: "EPS",    				itemValue: valueOrDefault(o.EarningsShare)  	},
+					{ id: 14, groupDescr: "Ratios", itemDescr: "EBITDA",    			itemValue: valueOrDefault(o.EBITDA) 	},
+					{ id: 15, groupDescr: "Ratios", itemDescr: "Price/Sales",    		itemValue: valueOrDefault(o.PriceSales) 	},
+					{ id: 16, groupDescr: "Ratios", itemDescr: "Price/Book ",    		itemValue: valueOrDefault(o.PriceBook) 	},
+					{ id: 17, groupDescr: "Ratios", itemDescr: "Price/Earnings",  	itemValue: valueOrDefault(o.PERatio) 	},
+					{ id: 18, groupDescr: "Ratios", itemDescr: "PEG ",    			itemValue: valueOrDefault(o.PEGRatio) 	},
+					{ id: 19, groupDescr: "Ratios", itemDescr: "Short",    			itemValue: valueOrDefault(o.ShortRatio) 	}
 				];
 				
 				//(Re)load the List:
