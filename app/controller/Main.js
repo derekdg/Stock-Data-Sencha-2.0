@@ -11,36 +11,29 @@ Ext.define('StockApp.controller.Main', {
 					statsStore: 'statsstore'
         },
         control: {
-						'statsform #submitbutton': {
+			'statsform #submitbutton': {
                 tap: 'onSubmitTap'
             }
         }
     },
-
-	onSubmitTap: function() {
-
-		console.log(this.getMain());
+	
+	  onSubmitTap: function() {
 		
 		this.getMain().setMasked({
-            xtype: 'loadmask',
-            message: 'Loading...'
-        });
+			xtype: 'loadmask',
+			message: 'Loading...'
+		});
 
-		        
 		// get the value from the form:
 		var ticker = this.getStatsForm().getValues().ticker
 		
 		//call to YQL:
 		this.makeYqlRequest(ticker, this);
 		
-		this.getMain().setMasked(false);
-		
-		
     },
 	
 	makeYqlRequest: function(ticker, e) {
 	
-		console.log('YQL');
 		var options = {};
 
 		var queryString = "select * from yahoo.finance.quotes where symbol in ('" + ticker + "')";
@@ -85,6 +78,9 @@ Ext.define('StockApp.controller.Main', {
 				//(Re)load the List:
 				e.getStatsList().setData(d);
 				e.getStatsList().refresh();
+				
+				 //Remove the Loading mask:
+				e.getMain().setMasked(false);
 			  }                    
 
 			}

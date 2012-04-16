@@ -2,11 +2,12 @@ Ext.define('StockApp.view.StatsForm', {
     extend: 'Ext.form.Panel',
     xtype: 'statsform',
 	requires: ['Ext.form.FieldSet'],
+
 		
     config: 
 		{
-    		margin: 20,
-    		scrollable: false,
+    	margin: 20,
+    	scrollable: false,
 			items: [
 		        {
 		            xtype: 'fieldset',
@@ -14,8 +15,11 @@ Ext.define('StockApp.view.StatsForm', {
 		            	{
 		                    xtype: 'textfield',
 		                    name : 'ticker',
-		                    label: 'Ticker:'
-		                }
+		                    label: 'Ticker:',
+		                    id: 'tickerfield',
+		                    autoComplete: false
+		                    }
+		                 
 		            ]
 		               
 				},
